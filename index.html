@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Haji Furniture | Wood Manufacturing, Flooring & Joinery Services | Since 1963 Dubai</title>
 
-  <!-- Google Fonts: Plus Jakarta Sans (Clean, High-Readability Geometric Typeface) -->
+  <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
@@ -30,6 +30,10 @@
               800: '#613f30',
               900: '#4e3328',
               950: '#2c1b14'
+            },
+            carbon: {
+              DEFAULT: '#1e2022',
+              light: '#424548'
             }
           },
           fontFamily: {
@@ -42,7 +46,6 @@
   </script>
 
   <style>
-    /* Refined architectural scrollbar */
     ::-webkit-scrollbar {
       width: 6px;
       height: 6px;
@@ -67,25 +70,24 @@
 
 <body class="bg-white text-stone-700 font-sans antialiased selection:bg-stone-900 selection:text-white">
 
-  <!-- TOP STATUS BAR -->
-  <div class="border-b border-stone-200 bg-[#f9f8f5] text-[11px] font-normal tracking-widest uppercase text-stone-600">
+  <!-- TOP STATUS BAR / NOTICE -->
+  <div class="border-b border-stone-700 bg-stone-800 text-[11px] font-normal tracking-widest uppercase text-stone-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex justify-between items-center flex-wrap gap-2">
       <div class="flex items-center gap-3">
-        <span class="inline-block w-1.5 h-1.5 rounded-full bg-timber-600"></span>
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-500"></span>
         <span>Established 1963 &bull; Dubai, United Arab Emirates</span>
       </div>
-      <div class="flex items-center gap-6 text-[11px] text-stone-500">
-        <span class="hidden md:inline">Dual Facilities: Al Qusais &amp; Al Ramool (15,000 Sq.Ft)</span>
-        <a href="#contact" class="hover:text-timber-700 transition-colors">P.O. Box 1422, Dubai</a>
+      <div class="flex items-center gap-6 text-[11px] text-stone-300">
+        <span class="hidden md:inline">Facilities: Al Qusais &amp; Al Ramool (15,000 Sq.Ft)</span>
+        <a href="#contact" class="hover:text-amber-400 transition-colors">P.O. Box 1422, Dubai</a>
       </div>
     </div>
   </div>
 
-  <!-- NAVIGATION -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200 transition-all duration-300" id="mainHeader">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- LOGO -->
+      <!-- LOGO (Text Only) -->
       <a href="#" class="group flex flex-col focus:outline-none">
         <span class="font-serif tracking-[0.2em] text-lg sm:text-xl font-semibold text-stone-950 uppercase group-hover:text-timber-700 transition-colors">
           Haji Furniture
@@ -99,10 +101,9 @@
       <nav class="hidden lg:flex items-center gap-8 text-xs uppercase tracking-widest text-stone-600 font-medium">
         <a href="#about" class="hover:text-stone-950 transition-colors">Legacy</a>
         <a href="#services" class="hover:text-stone-950 transition-colors">Capabilities</a>
-        <a href="#materials" class="hover:text-stone-950 transition-colors">Timber Spec</a>
         <a href="#projects" class="hover:text-stone-950 transition-colors">Projects</a>
         <a href="#clients" class="hover:text-stone-950 transition-colors">Clients</a>
-        <a href="#facility" class="hover:text-stone-950 transition-colors">Infrastructure</a>
+        <a href="#faq" class="hover:text-stone-950 transition-colors">FAQ</a>
       </nav>
 
       <!-- CTA -->
@@ -121,14 +122,13 @@
     </div>
 
     <!-- MOBILE DROPDOWN -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-[#faf9f6] border-b border-stone-200 px-6 py-6 space-y-4">
+    <div id="mobileMenu" class="hidden lg:hidden bg-stone-100 border-b border-stone-200 px-6 py-6 space-y-4">
       <nav class="flex flex-col space-y-3 text-xs uppercase tracking-widest text-stone-700">
         <a href="#about" class="mobile-nav-link py-1 hover:text-stone-950">Legacy</a>
         <a href="#services" class="mobile-nav-link py-1 hover:text-stone-950">Capabilities</a>
-        <a href="#materials" class="mobile-nav-link py-1 hover:text-stone-950">Timber Spec</a>
         <a href="#projects" class="mobile-nav-link py-1 hover:text-stone-950">Projects</a>
         <a href="#clients" class="mobile-nav-link py-1 hover:text-stone-950">Clients</a>
-        <a href="#facility" class="mobile-nav-link py-1 hover:text-stone-950">Infrastructure</a>
+        <a href="#faq" class="mobile-nav-link py-1 hover:text-stone-950">FAQ</a>
         <a href="#contact" class="mobile-nav-link py-1 hover:text-stone-950">Contact &amp; Warehouses</a>
       </nav>
       <div class="pt-3 border-t border-stone-200">
@@ -141,38 +141,30 @@
 
   <!-- HERO SECTION -->
   <section class="relative min-h-[80vh] flex items-center justify-center border-b border-stone-200 bg-stone-100 overflow-hidden">
-    <!-- Architectural Woodwork Background Image with 60% Opacity Overlay -->
     <div class="absolute inset-0 z-0 overflow-hidden">
       <img 
-        src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
-        alt="Architectural Woodwork Interior" 
-        class="w-full h-full object-cover object-center opacity-60 filter grayscale contrast-105 scale-105 transition-transform duration-1000"
-        onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop'"
+        src="https://i.ibb.co.com/w207q4S/Screenshot-2026-09-04-135152.png" 
+        alt="Haji Furniture Architectural Woodwork Interior" 
+        class="w-full h-full object-cover object-center opacity-70 contrast-105 scale-105 transition-transform duration-1000"
       />
-      <!-- Neutral 60% light overlay for visual softness and contrast -->
-      <div class="absolute inset-0 bg-white/60 backdrop-blur-[1.5px]"></div>
-      <!-- Subtle vertical gradient to smoothly blend into the border -->
-      <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-white/40 to-white"></div>
+      <div class="absolute inset-0 bg-white/50 backdrop-blur-[1px]"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/30 to-white"></div>
     </div>
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center relative z-10">
       
-      <!-- Minimal Eyebrow -->
       <div class="inline-block px-3 py-1 mb-6 border border-stone-300 text-stone-700 text-[11px] uppercase tracking-[0.25em] bg-white/90 shadow-2xs">
         Dubai &bull; Est. 1963
       </div>
 
-      <!-- Hero Headline with Strong Typographic Contrast -->
       <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-normal text-stone-950 tracking-tight leading-[1.1] max-w-4xl mx-auto drop-shadow-2xs">
         Architectural Woodwork &amp; Turnkey Joinery
       </h1>
 
-      <!-- Condensed, High-Impact Value Proposition -->
       <p class="mt-6 max-w-xl mx-auto text-sm sm:text-base text-stone-700 font-normal leading-relaxed bg-white/40 p-2 rounded-sm">
         Custom timber milling, specialized veneer stitching, and full flooring installation for commercial and institutional environments across the UAE.
       </p>
 
-      <!-- Action Buttons -->
       <div class="mt-9 flex flex-col sm:flex-row gap-3.5 justify-center items-center">
         <a href="#projects" class="w-full sm:w-auto px-7 py-3.5 bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-[0.2em] transition duration-200 shadow-sm">
           View Projects
@@ -182,7 +174,6 @@
         </a>
       </div>
 
-      <!-- Scannable Key Metrics: Refined Minimalist Architecture -->
       <div class="mt-16 pt-10 border-t border-stone-200 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto text-left">
         <div>
           <div class="font-serif text-3xl sm:text-4xl text-stone-950 font-light">1963</div>
@@ -204,94 +195,113 @@
     </div>
   </section>
 
-  <!-- ABOUT & LEGACY -->
-  <section id="about" class="py-20 border-b border-stone-200 bg-[#fbfaf8]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        
-        <!-- Left: Punchy Editorial Focus -->
-        <div class="lg:col-span-5 space-y-6">
-          <span class="text-xs font-semibold tracking-[0.25em] text-timber-700 uppercase block">Legacy &amp; Operations</span>
-          
-          <h2 class="font-serif text-2xl sm:text-3xl text-stone-950 font-normal leading-snug">
-            Six decades of manufacturing precision timber for landmark spaces.
+  <section id="about" class="py-28 border-b border-stone-200 bg-[#fbfaf8] relative overflow-hidden">
+    <!-- Decorative background architectural watermark -->
+    <div class="absolute right-0 top-1/2 -translate-y-1/2 text-[14vw] font-serif font-bold text-stone-900/[0.02] select-none pointer-events-none tracking-tighter">
+      1963
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-stone-200">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-2 h-2 rounded-full bg-timber-700"></span>
+            <span class="text-[11px] font-semibold tracking-[0.3em] text-timber-700 uppercase">Core Specializations</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-5xl text-stone-950 font-light tracking-tight">
+            Primary Capabilities
           </h2>
+        </div>
+        <p class="text-xs font-mono uppercase tracking-widest text-stone-400 mt-3 md:mt-0 flex items-center gap-2">
+          <span>Wood Manufacturing</span>
+          <span class="w-1 h-1 rounded-full bg-stone-300"></span>
+          <span>Flooring</span>
+          <span class="w-1 h-1 rounded-full bg-stone-300"></span>
+          <span>Joinery</span>
+        </p>
+      </div>
 
-          <p class="text-stone-600 text-xs sm:text-sm leading-relaxed font-light">
-            Founded in 1963, Haji Furniture operates 15,000 sq.ft across dual industrial facilities in Al Qusais and Al Ramool. We engineer bespoke woodwork from architectural concept drawings to on-site handover with millimeter precision.
-          </p>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-          <!-- Key Pillars instead of heavy paragraphs -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-            <div class="border-l-2 border-stone-900 pl-3">
-              <span class="text-stone-950 font-medium text-xs block">Engineering Fidelity</span>
-              <span class="text-stone-500 text-[11px] font-light">Exact tolerance matching for consulting architects.</span>
+        <!-- Pillar 01: Wood Manufacturing -->
+        <div class="group relative bg-white border border-stone-200/80 p-10 sm:p-12 transition-all duration-500 hover:border-stone-900 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-stone-200 group-hover:bg-timber-700 transition-colors duration-300"></div>
+          
+          <div>
+            <div class="flex justify-between items-center mb-8">
+              <span class="text-[11px] font-mono uppercase tracking-[0.25em] text-stone-400 group-hover:text-timber-700 transition-colors">01 // Mill</span>
+              <div class="w-8 h-8 rounded-full border border-stone-200 flex items-center justify-center text-stone-400 group-hover:border-stone-900 group-hover:text-stone-950 transition-all">
+                <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </div>
             </div>
-            <div class="border-l-2 border-stone-900 pl-3">
-              <span class="text-stone-950 font-medium text-xs block">Dual-Plant Capacity</span>
-              <span class="text-stone-500 text-[11px] font-light">Simultaneous raw lumber milling and fine joinery.</span>
-            </div>
+            
+            <h3 class="font-serif text-2xl sm:text-3xl text-stone-950 font-normal tracking-tight leading-snug">
+              Wood Manufacturing
+            </h3>
           </div>
 
-          <!-- Concise Warehouse Badges -->
-          <div class="pt-2 flex flex-wrap gap-2 text-[11px] font-mono text-stone-600">
-            <span class="px-3 py-1.5 border border-stone-200 bg-white">Al Qusais 1 &bull; Joinery &amp; Doors</span>
-            <span class="px-3 py-1.5 border border-stone-200 bg-white">Al Ramool &bull; Milling &amp; Lumber</span>
+          <div class="mt-12 pt-6 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono uppercase tracking-widest text-stone-500">
+            <span>Al Ramool Plant</span>
+            <span class="text-amber-700 font-semibold">&bull; Active</span>
           </div>
         </div>
 
-        <!-- Right: Visual Balance & Focus -->
-        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="space-y-4">
-            <div class="h-60 bg-stone-100 border border-stone-200 overflow-hidden relative group">
-              <img 
-                src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?q=80&w=900&auto=format&fit=crop" 
-                alt="Wood Crafting Details" 
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=900&auto=format&fit=crop'"
-              />
-              <span class="absolute bottom-3 left-3 text-[10px] font-mono uppercase tracking-widest bg-stone-900/90 text-white px-2 py-1">
-                CNC &amp; Turning
-              </span>
+        <!-- Pillar 02: Flooring Installation -->
+        <div class="group relative bg-white border border-stone-200/80 p-10 sm:p-12 transition-all duration-500 hover:border-stone-900 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-stone-200 group-hover:bg-timber-700 transition-colors duration-300"></div>
+          
+          <div>
+            <div class="flex justify-between items-center mb-8">
+              <span class="text-[11px] font-mono uppercase tracking-[0.25em] text-stone-400 group-hover:text-timber-700 transition-colors">02 // Surface</span>
+              <div class="w-8 h-8 rounded-full border border-stone-200 flex items-center justify-center text-stone-400 group-hover:border-stone-900 group-hover:text-stone-950 transition-all">
+                <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </div>
             </div>
-            <div class="p-5 border border-stone-200 bg-white">
-              <h3 class="font-serif text-base text-stone-900 mb-1">Turnkey Flooring</h3>
-              <p class="text-xs text-stone-500 leading-relaxed font-light">
-                Subfloor self-leveling, acoustic underlayment, solid parquet, luxury vinyl, and heavy carpet.
-              </p>
-            </div>
+            
+            <h3 class="font-serif text-2xl sm:text-3xl text-stone-950 font-normal tracking-tight leading-snug">
+              Flooring Installation
+            </h3>
           </div>
 
-          <div class="space-y-4 sm:pt-6">
-            <div class="p-5 border border-stone-200 bg-white">
-              <h3 class="font-serif text-base text-stone-900 mb-1">Veneer Stitching</h3>
-              <p class="text-xs text-stone-500 leading-relaxed font-light">
-                Book-matched marquetry, acoustic wall fluting, and geometric traditional Mashrabiya screens.
-              </p>
+          <div class="mt-12 pt-6 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono uppercase tracking-widest text-stone-500">
+            <span>Turnkey Execution</span>
+            <span class="text-amber-700 font-semibold">&bull; Active</span>
+          </div>
+        </div>
+
+        <!-- Pillar 03: Joinery Services -->
+        <div class="group relative bg-white border border-stone-200/80 p-10 sm:p-12 transition-all duration-500 hover:border-stone-900 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-stone-200 group-hover:bg-timber-700 transition-colors duration-300"></div>
+          
+          <div>
+            <div class="flex justify-between items-center mb-8">
+              <span class="text-[11px] font-mono uppercase tracking-[0.25em] text-stone-400 group-hover:text-timber-700 transition-colors">03 // Fit-Out</span>
+              <div class="w-8 h-8 rounded-full border border-stone-200 flex items-center justify-center text-stone-400 group-hover:border-stone-900 group-hover:text-stone-950 transition-all">
+                <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </div>
             </div>
-            <div class="h-60 bg-stone-100 border border-stone-200 overflow-hidden relative group">
-              <img 
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=900&auto=format&fit=crop" 
-                alt="Corporate Boardroom Joinery" 
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                onerror="this.src='https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=900&auto=format&fit=crop'"
-              />
-              <span class="absolute bottom-3 left-3 text-[10px] font-mono uppercase tracking-widest bg-stone-900/90 text-white px-2 py-1">
-                Wall Paneling
-              </span>
-            </div>
+            
+            <h3 class="font-serif text-2xl sm:text-3xl text-stone-950 font-normal tracking-tight leading-snug">
+              Joinery Services
+            </h3>
+          </div>
+
+          <div class="mt-12 pt-6 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono uppercase tracking-widest text-stone-500">
+            <span>Al Qusais HQ</span>
+            <span class="text-amber-700 font-semibold">&bull; Active</span>
           </div>
         </div>
 
       </div>
+
     </div>
   </section>
 
-  <!-- PRODUCTS & CAPABILITIES (From Profile Page 2) -->
+  <!-- CAPABILITIES / SERVICES SECTION -->
   <section id="services" class="py-24 border-b border-stone-200 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-stone-200">
         <div>
           <span class="text-[11px] font-semibold tracking-[0.3em] text-timber-700 uppercase block mb-2">Scope of Expertise</span>
@@ -304,7 +314,6 @@
         </p>
       </div>
 
-      <!-- Architectural Capabilities Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-stone-200">
 
         <!-- Capability 01 -->
@@ -450,135 +459,10 @@
     </div>
   </section>
 
-  <!-- TIMBER & WOOD SPECIES SELECTOR (Profile Page 2) -->
-  <section id="materials" class="py-24 border-b border-stone-200 bg-[#fbfaf8]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-stone-200">
-        <div>
-          <span class="text-[11px] font-semibold tracking-[0.3em] text-timber-700 uppercase block mb-2">Raw Material Inventory</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-stone-950 font-normal">
-            Timber &amp; Hardwood Selection
-          </h2>
-        </div>
-        <p class="text-xs font-mono uppercase tracking-widest text-stone-400 mt-3 md:mt-0">
-          Kiln-Dried Stockpiles &bull; Millimeter Tolerance
-        </p>
-      </div>
-
-      <!-- INTERACTIVE WOOD SELECTOR -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-        
-        <!-- Wood Buttons: Minimalist Architectural Index -->
-        <div class="lg:col-span-5 divide-y divide-stone-200 border-y border-stone-200" id="woodList">
-          <button onclick="selectWood('oak')" class="wood-btn active w-full text-left py-4 px-3 flex justify-between items-center transition duration-200 bg-white border-l-2 border-timber-700" data-wood="oak">
-            <div>
-              <span class="font-serif text-base text-stone-950 block">White &amp; Red Oak</span>
-              <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Heavy Grain &bull; Hardwood</span>
-            </div>
-            <span class="text-[10px] font-mono uppercase tracking-widest text-timber-700 font-medium">Selected</span>
-          </button>
-
-          <button onclick="selectWood('teak')" class="wood-btn w-full text-left py-4 px-3 flex justify-between items-center transition duration-200 hover:bg-stone-50/80 border-l-2 border-transparent" data-wood="teak">
-            <div>
-              <span class="font-serif text-base text-stone-800 block">Burma &amp; Plantation Teak</span>
-              <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Natural Oils &bull; Moisture Proof</span>
-            </div>
-            <span class="text-[10px] font-mono uppercase tracking-widest text-stone-400">Inspect</span>
-          </button>
-
-          <button onclick="selectWood('ash')" class="wood-btn w-full text-left py-4 px-3 flex justify-between items-center transition duration-200 hover:bg-stone-50/80 border-l-2 border-transparent" data-wood="ash">
-            <div>
-              <span class="font-serif text-base text-stone-800 block">American Ash</span>
-              <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Elasticity &bull; Distinct Grain</span>
-            </div>
-            <span class="text-[10px] font-mono uppercase tracking-widest text-stone-400">Inspect</span>
-          </button>
-
-          <button onclick="selectWood('iroko')" class="wood-btn w-full text-left py-4 px-3 flex justify-between items-center transition duration-200 hover:bg-stone-50/80 border-l-2 border-transparent" data-wood="iroko">
-            <div>
-              <span class="font-serif text-base text-stone-800 block">Iroko Wood</span>
-              <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">African Teak Alternative &bull; Durable</span>
-            </div>
-            <span class="text-[10px] font-mono uppercase tracking-widest text-stone-400">Inspect</span>
-          </button>
-
-          <button onclick="selectWood('meranti')" class="wood-btn w-full text-left py-4 px-3 flex justify-between items-center transition duration-200 hover:bg-stone-50/80 border-l-2 border-transparent" data-wood="meranti">
-            <div>
-              <span class="font-serif text-base text-stone-800 block">Red Meranti</span>
-              <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Structural Joinery &bull; Moldings</span>
-            </div>
-            <span class="text-[10px] font-mono uppercase tracking-widest text-stone-400">Inspect</span>
-          </button>
-
-          <button onclick="selectWood('beech')" class="wood-btn w-full text-left py-4 px-3 flex justify-between items-center transition duration-200 hover:bg-stone-50/80 border-l-2 border-transparent" data-wood="beech">
-            <div>
-              <span class="font-serif text-base text-stone-800 block">European Beech</span>
-              <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Turning &bull; Fine Furniture</span>
-            </div>
-            <span class="text-[10px] font-mono uppercase tracking-widest text-stone-400">Inspect</span>
-          </button>
-
-          <button onclick="selectWood('mahogany')" class="wood-btn w-full text-left py-4 px-3 flex justify-between items-center transition duration-200 hover:bg-stone-50/80 border-l-2 border-transparent" data-wood="mahogany">
-            <div>
-              <span class="font-serif text-base text-stone-800 block">Mahogany &amp; Maple</span>
-              <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Luxury Veneers &bull; Rich Hue</span>
-            </div>
-            <span class="text-[10px] font-mono uppercase tracking-widest text-stone-400">Inspect</span>
-          </button>
-
-          <button onclick="selectWood('whitewood')" class="wood-btn w-full text-left py-4 px-3 flex justify-between items-center transition duration-200 hover:bg-stone-50/80 border-l-2 border-transparent" data-wood="whitewood">
-            <div>
-              <span class="font-serif text-base text-stone-800 block">White Wood &amp; Pine Wood</span>
-              <span class="text-[11px] font-mono text-stone-400 uppercase tracking-wider">Framing &bull; Substructures</span>
-            </div>
-            <span class="text-[10px] font-mono uppercase tracking-widest text-stone-400">Inspect</span>
-          </button>
-        </div>
-
-        <!-- Wood Detail Display: Pure Architectural Spec Sheet -->
-        <div class="lg:col-span-7 border border-stone-200 bg-white p-8 sm:p-10 sticky top-28">
-          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-stone-100 pb-6 mb-6 gap-2">
-            <div>
-              <span id="woodCategory" class="text-[10px] uppercase font-mono tracking-[0.25em] text-timber-700 block mb-1">Hardwood Species</span>
-              <h3 id="woodTitle" class="font-serif text-3xl text-stone-950 font-normal">White &amp; Red Oak</h3>
-            </div>
-            <span id="woodOrigin" class="text-[11px] text-stone-500 font-mono">Origin: North America / Europe</span>
-          </div>
-
-          <p id="woodDesc" class="text-stone-600 text-xs sm:text-sm leading-relaxed mb-8 font-light">
-            Renowned for exceptional strength, prominent growth ring textures, and outstanding response to stains and fuming. Frequently specified across Haji Furniture projects for executive boardroom desks, high-traffic commercial flooring, and statement wall cladding.
-          </p>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 border-t border-stone-100 pt-6 text-xs mb-8">
-            <div>
-              <span class="text-stone-400 font-mono text-[10px] block uppercase tracking-wider mb-1.5">Density &amp; Workability</span>
-              <span id="woodDensity" class="text-stone-900 font-medium text-xs leading-relaxed block">710 - 750 kg/m³ &bull; Clean Sizing &amp; Finish</span>
-            </div>
-            <div>
-              <span class="text-stone-400 font-mono text-[10px] block uppercase tracking-wider mb-1.5">Primary Architectural Application</span>
-              <span id="woodApp" class="text-stone-900 font-medium text-xs leading-relaxed block">Flooring, Fluted Paneling, Executive Desks</span>
-            </div>
-          </div>
-
-          <div class="pt-6 border-t border-stone-100 flex items-center justify-between">
-            <span class="text-xs text-stone-400 font-light">Direct warehouse supply available cut-to-size</span>
-            <a href="#inquiry" class="text-xs uppercase tracking-widest text-stone-900 hover:text-timber-700 font-medium transition-colors">
-              Request Technical Spec &rarr;
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PORTFOLIO / GALLERY (PURE IMAGERY, ZERO METADATA) -->
+  <!-- PROJECTS SECTION -->
   <section id="projects" class="py-24 border-b border-stone-200 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Minimalist Architectural Section Header -->
       <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-12 pb-6 border-b border-stone-200 gap-2">
         <h2 class="font-serif text-3xl sm:text-4xl text-stone-950 font-normal tracking-tight">
           Selected Projects
@@ -588,7 +472,6 @@
         </span>
       </div>
 
-      <!-- Pure Visual Gallery Grid: Balanced 3x2 Architectural Matrix -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- 01. Emirates Islamic Bank -->
@@ -668,390 +551,93 @@
     </div>
   </section>
 
-  <!-- CLIENT ROSTER: Clean Architectural Matrix with Visual Logos -->
-  <section id="clients" class="py-24 border-b border-stone-200 bg-[#fbfaf8]">
+  <!-- CLIENTS SECTION -->
+  <section id="clients" class="py-20 border-b border-stone-200 bg-[#fbfaf8]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Client Sheet 01 -->
+        <a href="https://ibb.co.com/TxdBD8fd" target="_blank" rel="noopener noreferrer" class="group block overflow-hidden border border-stone-200 bg-white transition-all duration-300 hover:border-stone-400 shadow-2xs">
+          <img 
+            src="https://i.ibb.co.com/rRNGK6jN/Screenshot-2026-09-04-125025.png" 
+            alt="Haji Furniture Institutional Clients - Sheet 1" 
+            class="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-500"
+            loading="lazy"
+          />
+        </a>
+
+        <!-- Client Sheet 02 -->
+        <a href="https://ibb.co.com/8nK11xgr" target="_blank" rel="noopener noreferrer" class="group block overflow-hidden border border-stone-200 bg-white transition-all duration-300 hover:border-stone-400 shadow-2xs">
+          <img 
+            src="https://i.ibb.co.com/twmVV2pq/Screenshot-2026-09-04-125006.png" 
+            alt="Haji Furniture Institutional Clients - Sheet 2" 
+            class="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-500"
+            loading="lazy"
+          />
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (1 Column Accordion) -->
+  <section id="faq" class="py-24 border-b border-stone-200 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-stone-200">
-        <div>
-          <span class="text-[11px] font-semibold tracking-[0.3em] text-timber-700 uppercase block mb-2">Track Record of Trust</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-stone-950 font-normal">
-            Institutional Clients
-          </h2>
-        </div>
-        <p class="text-xs font-mono uppercase tracking-widest text-stone-400 mt-3 md:mt-0">
-          32 Landmark Partners Across UAE &bull; Est. 1963
+      <div class="text-center mb-14">
+        <span class="text-[11px] font-semibold tracking-[0.3em] text-timber-700 uppercase block mb-2">Common Inquiries</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-950 font-normal tracking-tight">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-stone-600 text-xs sm:text-sm mt-3 leading-relaxed">
+          Detailed insights regarding our joinery capabilities, facility operations, and contractor execution standards across Dubai and the UAE.
         </p>
       </div>
 
-      <!-- CLIENT FILTER TABS -->
-      <div class="flex flex-wrap gap-4 mb-10 text-xs tracking-wider uppercase font-medium border-b border-stone-200 pb-3">
-        <button onclick="filterClients('all')" class="client-filter-btn text-stone-950 border-b-2 border-stone-950 pb-2 -mb-[14px] transition" data-cfilter="all">All Clients (32)</button>
-        <button onclick="filterClients('banking-gov')" class="client-filter-btn text-stone-400 hover:text-stone-900 pb-2 transition" data-cfilter="banking-gov">Banking &amp; Government</button>
-        <button onclick="filterClients('corporate-re')" class="client-filter-btn text-stone-400 hover:text-stone-900 pb-2 transition" data-cfilter="corporate-re">Corporate &amp; Real Estate</button>
-        <button onclick="filterClients('hospitality-retail')" class="client-filter-btn text-stone-400 hover:text-stone-900 pb-2 transition" data-cfilter="hospitality-retail">Hospitality &amp; Retail</button>
-      </div>
+      <!-- 1-Column FAQ Accordion List -->
+      <div class="space-y-4" id="faqAccordion">
 
-      <!-- Hairline Client Matrix: 32 Exact Visual Logos from Profile -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 border-t border-l border-stone-200 bg-white" id="clientGrid">
-        
-        <!-- 01. Mashreq Bank -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="banking-gov">
-          <div class="flex items-center gap-2 mb-1.5 transition-transform group-hover:scale-105 duration-200">
-            <span class="text-sm font-bold tracking-tight text-stone-900">mashreq</span>
-            <svg class="w-6 h-6 text-amber-500 fill-current" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-            </svg>
-            <span class="text-xs font-semibold text-stone-700">المشرق</span>
-          </div>
-          <span class="text-[9px] font-mono tracking-widest text-amber-700 uppercase">WE MAKE POSSIBLE</span>
-        </div>
-
-        <!-- 02. Emirates Islamic -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="banking-gov">
-          <div class="flex items-center gap-2.5 mb-1.5 transition-transform group-hover:scale-105 duration-200">
-            <div class="w-6 h-6 bg-[#4c125a] flex items-center justify-center text-white font-bold text-xs">EI</div>
-            <div class="text-left">
-              <span class="text-[10px] font-bold text-[#4c125a] block leading-none">الإمارات الإسلامي</span>
-              <span class="text-[9px] font-extrabold tracking-wider text-stone-900 block leading-tight">EMIRATES ISLAMIC</span>
-            </div>
-          </div>
-          <span class="text-[9px] font-mono text-stone-400 uppercase">Islamic Banking</span>
-        </div>
-
-        <!-- 03. ADIB (Abu Dhabi Islamic Bank) -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="banking-gov">
-          <div class="flex items-center gap-2 mb-1.5 transition-transform group-hover:scale-105 duration-200">
-            <span class="text-sm font-extrabold text-[#005587] tracking-wider">ADIB</span>
-            <div class="w-5 h-5 rounded-full bg-gradient-to-tr from-[#005587] to-cyan-400 flex items-center justify-center">
-              <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-            </div>
-            <span class="text-[10px] font-medium text-stone-600">مصرف أبوظبي الإسلامي</span>
-          </div>
-          <span class="text-[9px] font-mono text-stone-400 uppercase">Abu Dhabi</span>
-        </div>
-
-        <!-- 04. RAKBANK -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="banking-gov">
-          <div class="flex items-center gap-1.5 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <svg class="w-5 h-5 text-red-600 fill-current" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2V7h2v10z"/>
-            </svg>
-            <span class="text-sm font-black text-red-600 tracking-tight">RAKBANK</span>
-          </div>
-          <span class="text-[9px] italic text-stone-500 font-sans">Simply Better</span>
-        </div>
-
-        <!-- 05. Ajman Bank -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="banking-gov">
-          <div class="flex items-center gap-2 mb-1.5 transition-transform group-hover:scale-105 duration-200">
-            <div class="w-5 h-5 border-2 border-amber-600 rotate-45 flex items-center justify-center">
-              <div class="w-2 h-2 bg-amber-600"></div>
-            </div>
-            <div class="text-left">
-              <span class="text-[10px] font-semibold text-stone-900 block leading-tight">مصرف عجمان</span>
-              <span class="text-[11px] font-bold text-stone-950 block leading-tight">Ajman Bank</span>
-            </div>
-          </div>
-          <span class="text-[9px] font-mono text-stone-400 uppercase">Retail &amp; Corporate</span>
-        </div>
-
-        <!-- 06. NBF (National Bank of Fujairah) -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="banking-gov">
-          <div class="flex items-center gap-2 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <span class="text-lg font-light italic text-[#00838f]">nbf</span>
-          </div>
-          <span class="text-[9px] font-semibold text-stone-600 uppercase">National Bank of Fujairah</span>
-        </div>
-
-        <!-- 07. Noor Bank -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="banking-gov">
-          <div class="text-center leading-none mb-1 transition-transform group-hover:scale-105 duration-200">
-            <span class="text-base font-black tracking-tight text-stone-800 block">NOOR</span>
-            <span class="text-base font-black tracking-tight text-[#1a539b] block">BANK</span>
-          </div>
-          <span class="text-[9px] font-mono text-stone-400 uppercase">Islamic Finance</span>
-        </div>
-
-        <!-- 08. BRS Ventures -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="corporate-re">
-          <div class="flex items-center gap-1.5 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <span class="font-serif text-xl font-bold text-[#b58840] tracking-tight">BRS</span>
-            <span class="w-2.5 h-3.5 bg-red-600 inline-block clip-path-polygon"></span>
-          </div>
-          <span class="text-[9px] font-mono tracking-widest text-stone-500 uppercase">VENTURES ABU DHABI</span>
-        </div>
-
-        <!-- 09. DAMAC Properties -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="corporate-re">
-          <span class="font-sans font-black italic tracking-wider text-xl text-stone-900 transition-transform group-hover:scale-105 duration-200">DAMAC</span>
-          <span class="text-[9px] font-mono tracking-widest text-stone-400 uppercase mt-1">Luxury Living</span>
-        </div>
-
-        <!-- 10. Enova by Veolia -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="corporate-re">
-          <div class="flex items-center gap-2 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <div class="w-5 h-5 rounded-full border border-red-600 flex items-center justify-center text-red-600 font-bold text-[10px]">M</div>
-            <span class="text-base font-extrabold text-[#002b49] tracking-tight">ENOVA</span>
-          </div>
-          <span class="text-[9px] font-mono text-stone-500">by VEOLIA</span>
-        </div>
-
-        <!-- 11. Dubai Health Authority (DHA) -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="banking-gov">
-          <div class="flex items-center gap-2 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <span class="text-[10px] font-medium text-stone-800">هيئة الصحة بدبي</span>
-            <svg class="w-5 h-5 text-emerald-600 fill-current" viewBox="0 0 24 24">
-              <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.6-6.2 4.6 2.4-7.4-6.2-4.5h7.6z"/>
-            </svg>
-          </div>
-          <span class="text-[9px] font-bold tracking-wider text-stone-700 uppercase">DUBAI HEALTH AUTHORITY</span>
-        </div>
-
-        <!-- 12. Salama Bint Hamdan Al Nahyan Foundation (SHF) -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="corporate-re">
-          <div class="flex items-center gap-2 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <div class="w-6 h-6 border border-emerald-700 bg-emerald-800 text-white font-mono text-[9px] flex items-center justify-center">SHF</div>
-            <span class="text-[9px] font-semibold text-stone-800 leading-tight text-left">مؤسسة سلامة بنت حمدان<br/>AL NAHYAN FOUNDATION</span>
+        <!-- FAQ Item 01 -->
+        <div id="faqCard1" class="border border-stone-200 bg-[#fbfaf8] transition-all duration-200 rounded-xs">
+          <button onclick="toggleFaq(1)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-medium text-sm text-stone-950">Where are Haji Furniture manufacturing facilities located?</span>
+            <span id="faqIcon1" class="font-mono text-lg text-stone-500 transition-transform duration-300 inline-block">+</span>
+          </button>
+          <div id="faqContent1" class="hidden px-6 pb-6 text-xs text-stone-600 leading-relaxed border-t border-stone-200 pt-4 font-light">
+            We operate two dedicated manufacturing and warehousing facilities across Dubai spanning 15,000 sq. ft.: our Headquarters &amp; Joinery Plant in Al Qusais Industrial Area 1 (Warehouse No. 23, Street 10b), and our Timber Milling &amp; Raw Stores plant in Al Ramool Industrial Area.
           </div>
         </div>
 
-        <!-- 13. DEWA (Dubai Electricity & Water Authority) -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="banking-gov">
-          <div class="flex items-center gap-2 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <span class="text-[10px] font-bold text-stone-800">هيئة كهرباء ومياه دبي</span>
-            <div class="w-5 h-5 rounded-full border-2 border-emerald-600 border-t-cyan-500"></div>
-          </div>
-          <span class="text-[8px] font-mono text-stone-500 uppercase">Dubai Electricity &amp; Water Authority</span>
-        </div>
-
-        <!-- 14. Tawazun -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="corporate-re">
-          <div class="flex items-center gap-2 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <span class="text-sm font-semibold text-stone-800">توازن</span>
-            <span class="text-xs text-red-600 font-bold">+</span>
-            <span class="text-xs font-bold tracking-widest text-stone-900 uppercase">TAWAZUN</span>
-          </div>
-          <span class="text-[9px] font-mono text-stone-400 uppercase">Strategic Industry</span>
-        </div>
-
-        <!-- 15. UAE Exchange -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="banking-gov">
-          <div class="flex items-center gap-1 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <span class="text-xs font-black tracking-tight text-stone-900">UAE</span>
-            <span class="text-sm font-black text-red-600 italic">X</span>
-            <span class="text-xs font-black tracking-tight text-stone-900">CHANGE</span>
-          </div>
-          <span class="text-[8px] italic text-stone-400">Service is our Currency</span>
-        </div>
-
-        <!-- 16. Bukhatir Properties -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="corporate-re">
-          <div class="flex items-center gap-1.5 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <span class="text-xl font-light text-stone-800">bp</span>
-          </div>
-          <span class="text-[9px] font-semibold tracking-wider text-stone-700 uppercase">Bukhatir Properties</span>
-        </div>
-
-        <!-- 17. FANR (Federal Authority for Nuclear Regulation) -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="banking-gov">
-          <div class="flex items-center gap-1.5 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <span class="text-sm font-black text-amber-700 tracking-wider">FANR</span>
-            <svg class="w-4 h-4 text-amber-600 fill-current" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
-            </svg>
-          </div>
-          <span class="text-[8px] font-mono text-stone-500 uppercase leading-tight">Federal Authority Nuclear Regulation</span>
-        </div>
-
-        <!-- 18. EMAAR -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="corporate-re">
-          <div class="w-6 h-6 bg-stone-900 flex items-center justify-center text-white mb-1 transition-transform group-hover:scale-105 duration-200">
-            <svg class="w-4 h-4 text-white fill-current" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2z"/></svg>
-          </div>
-          <span class="text-sm font-bold tracking-[0.25em] text-stone-950 uppercase">EMAAR</span>
-        </div>
-
-        <!-- 19. DWTC (Dubai World Trade Centre) -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="corporate-re">
-          <div class="w-5 h-5 bg-[#004b87] rotate-45 mb-1.5 flex items-center justify-center transition-transform group-hover:scale-105 duration-200">
-            <div class="w-2 h-2 bg-white"></div>
-          </div>
-          <span class="text-[9px] font-semibold text-stone-700 block leading-tight">مركز دبي التجاري العالمي</span>
-          <span class="text-[9px] font-extrabold tracking-wider text-stone-950 uppercase">DUBAI WORLD TRADE CENTRE</span>
-        </div>
-
-        <!-- 20. Majid Al Futtaim -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="corporate-re">
-          <div class="flex items-center gap-1.5 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <span class="font-serif text-base text-amber-700 font-semibold">M</span>
-            <span class="text-[10px] font-bold text-stone-800">ماجد الفطيم</span>
-          </div>
-          <span class="text-[9px] font-extrabold tracking-wider text-stone-950 uppercase">MAJID AL FUTTAIM</span>
-        </div>
-
-        <!-- 21. FiLLi Cafe -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="hospitality-retail">
-          <div class="w-8 h-8 rounded-full bg-[#3d2314] text-white flex items-center justify-center font-bold text-xs mb-1 transition-transform group-hover:scale-105 duration-200">
-            FiLLi
-          </div>
-          <span class="text-[9px] font-mono text-stone-600 uppercase">Tea n' Talk &bull; Since 1991</span>
-        </div>
-
-        <!-- 22. Medical & Fitness Center -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="banking-gov">
-          <div class="w-4 h-4 rounded-full bg-emerald-500 mb-1 transition-transform group-hover:scale-105 duration-200"></div>
-          <span class="text-[10px] font-bold tracking-wider text-stone-900 uppercase">Medical &amp; Fitness</span>
-          <span class="text-[9px] font-mono text-stone-400 uppercase">Center Dubai</span>
-        </div>
-
-        <!-- 23. Ashok Leyland -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="corporate-re">
-          <div class="flex items-center gap-1.5 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <div class="w-4 h-4 rounded-full border border-blue-600 flex items-center justify-center text-[9px] font-bold text-blue-600">L</div>
-            <span class="text-xs font-black tracking-wider text-[#004f9e] uppercase">ASHOK LEYLAND</span>
-          </div>
-          <span class="text-[9px] font-mono text-stone-400 uppercase">Automotive Mobility</span>
-        </div>
-
-        <!-- 24. Jelly Belly -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="hospitality-retail">
-          <span class="font-serif italic font-extrabold text-base text-red-600 transition-transform group-hover:scale-105 duration-200">Jelly Belly</span>
-          <span class="text-[9px] font-mono text-stone-400 uppercase mt-0.5">Ice Cream &amp; Retail</span>
-        </div>
-
-        <!-- 25. SameDay Dental Implants -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="banking-gov">
-          <div class="flex items-center gap-1.5 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <div class="w-4 h-4 border border-cyan-600 rounded-sm"></div>
-            <span class="text-xs font-bold text-[#0077b6]">SameDay</span>
-          </div>
-          <span class="text-[8px] font-mono text-stone-500 uppercase">Dental Implants Clinic</span>
-        </div>
-
-        <!-- 26. Lexus -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="corporate-re">
-          <div class="w-6 h-4 border border-stone-800 rounded-full flex items-center justify-center font-bold italic text-[11px] text-stone-900 mb-1 transition-transform group-hover:scale-105 duration-200">
-            L
-          </div>
-          <span class="text-xs font-black tracking-[0.25em] text-stone-950 uppercase">LEXUS</span>
-        </div>
-
-        <!-- 27. in5 Tech -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="corporate-re">
-          <span class="text-xl font-black text-stone-700 transition-transform group-hover:scale-105 duration-200">in5</span>
-          <span class="text-[9px] font-mono text-stone-400 uppercase mt-0.5">Tech &bull; Design &bull; Media</span>
-        </div>
-
-        <!-- 28. Serco -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="corporate-re">
-          <div class="flex items-center gap-1 mb-1 transition-transform group-hover:scale-105 duration-200">
-            <span class="text-base font-extrabold tracking-tight text-stone-800">serco</span>
-            <span class="w-2 h-1 bg-red-600 rounded-full inline-block"></span>
-          </div>
-          <span class="text-[9px] font-mono text-stone-400 uppercase">Global Operations</span>
-        </div>
-
-        <!-- 29. Patiala Restaurant -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="hospitality-retail">
-          <span class="font-serif text-base font-bold text-stone-900 transition-transform group-hover:scale-105 duration-200">Patiala</span>
-          <span class="text-[9px] font-mono text-stone-400 uppercase mt-0.5">Fine Indian Dining</span>
-        </div>
-
-        <!-- 30. Famous Dave's -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="hospitality-retail">
-          <span class="text-xs font-black italic text-red-600 uppercase tracking-tight transition-transform group-hover:scale-105 duration-200">Famous Dave's</span>
-          <span class="text-[9px] font-mono text-stone-400 uppercase mt-0.5">Bar-B-Que UAE</span>
-        </div>
-
-        <!-- 31. Supper Club -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="hospitality-retail">
-          <span class="text-xl font-black text-stone-950 transition-transform group-hover:scale-105 duration-200">S</span>
-          <span class="text-[9px] font-mono text-stone-600 uppercase tracking-wider">supperclub &bull; Palm</span>
-        </div>
-
-        <!-- 32. GQ Bar -->
-        <div class="client-logo-card p-6 border-r border-b border-stone-200 flex flex-col justify-center items-center text-center group hover:bg-stone-50/60 transition min-h-[120px]" data-ccat="hospitality-retail">
-          <div class="flex items-center gap-1.5 transition-transform group-hover:scale-105 duration-200">
-            <span class="text-base font-black text-stone-800">GQ</span>
-            <span class="text-[10px] font-mono font-bold text-red-600 uppercase">BAR</span>
-          </div>
-          <span class="text-[9px] font-mono text-stone-400 uppercase mt-0.5">JW Marriott Marquis</span>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- MANUFACTURING FACILITIES / INFRASTRUCTURE -->
-  <section id="facility" class="py-24 border-b border-stone-200 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        
-        <div class="lg:col-span-6 space-y-6">
-          <span class="text-[11px] font-semibold tracking-[0.3em] text-graphite-500 uppercase block">Dual-Plant Infrastructure</span>
-          <h2 class="text-3xl sm:text-4xl text-carbon-900 font-semibold leading-tight tracking-tight">
-            15,000 Sq.Ft of advanced joinery &amp; veneer machinery.
-          </h2>
-          <p class="text-graphite-600 text-xs sm:text-sm leading-relaxed font-normal">
-            Operating two specialized facilities across Dubai’s prime industrial corridors allows Haji Furniture to execute fast-track contractor schedules without compromising the millimeter precision of handcrafted woodwork.
-          </p>
-
-          <div class="space-y-6 pt-4 border-t border-stone-100">
-            <div class="flex items-baseline gap-4">
-              <span class="font-mono text-xs text-graphite-400 font-semibold">01</span>
-              <div>
-                <h4 class="text-carbon-900 text-sm font-semibold">Multi-Axis CNC Routing &amp; 3D Milling</h4>
-                <p class="text-xs text-graphite-500 mt-0.5">High-speed computerized carving for intricate mashrabiya screens, acoustic fluted panels, and curved components.</p>
-              </div>
-            </div>
-
-            <div class="flex items-baseline gap-4">
-              <span class="font-mono text-xs text-graphite-400 font-semibold">02</span>
-              <div>
-                <h4 class="text-carbon-900 text-sm font-semibold">Automated Veneer Pressing &amp; Stitching</h4>
-                <p class="text-xs text-graphite-500 mt-0.5">Automated splicing, book-matching, and hydraulic hot-press bonding of natural exotic veneers to MDF and Marine Plywood.</p>
-              </div>
-            </div>
-
-            <div class="flex items-baseline gap-4">
-              <span class="font-mono text-xs text-graphite-400 font-semibold">03</span>
-              <div>
-                <h4 class="text-carbon-900 text-sm font-semibold">Climate-Controlled Finishing Booths</h4>
-                <p class="text-xs text-graphite-500 mt-0.5">Dust-free spray application for open-pore natural oils, matte polyurethane, UV-cured lacquers, and marine sealants.</p>
-              </div>
-            </div>
+        <!-- FAQ Item 02 -->
+        <div id="faqCard2" class="border border-stone-200 bg-[#fbfaf8] transition-all duration-200 rounded-xs">
+          <button onclick="toggleFaq(2)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-medium text-sm text-stone-950">What types of wood and timber do you supply and process?</span>
+            <span id="faqIcon2" class="font-mono text-lg text-stone-500 transition-transform duration-300 inline-block">+</span>
+          </button>
+          <div id="faqContent2" class="hidden px-6 pb-6 text-xs text-stone-600 leading-relaxed border-t border-stone-200 pt-4 font-light">
+            We stock and process a comprehensive range of kiln-dried hardwoods and softwoods including Red Meranti, White Oak, Red Oak, Ash, Beech, Maple, Mahogany, White Wood, Pine, Iroko, and Burma Teak, tailored to strict architectural moisture standards.
           </div>
         </div>
 
-        <!-- Light, Elegant Architectural Card (Previously Dark/Heavy) -->
-        <div class="lg:col-span-6 border border-stone-200 bg-[#fbfaf8] p-8 sm:p-10 space-y-8">
-          <div class="text-[11px] font-mono uppercase text-graphite-500 tracking-[0.25em] font-semibold">
-            Plant Locations &bull; Dubai
+        <!-- FAQ Item 03 -->
+        <div id="faqCard3" class="border border-stone-200 bg-[#fbfaf8] transition-all duration-200 rounded-xs">
+          <button onclick="toggleFaq(3)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-medium text-sm text-stone-950">Do you provide turnkey flooring installation services?</span>
+            <span id="faqIcon3" class="font-mono text-lg text-stone-500 transition-transform duration-300 inline-block">+</span>
+          </button>
+          <div id="faqContent3" class="hidden px-6 pb-6 text-xs text-stone-600 leading-relaxed border-t border-stone-200 pt-4 font-light">
+            Yes. We provide complete turnkey flooring execution including subfloor self-leveling compound application, acoustic underlayment, solid hardwood and engineered parquet laying, herringbone/chevron patterns, luxury vinyl tile (LVT), and heavy commercial carpeting.
           </div>
+        </div>
 
-          <div class="space-y-6">
-            <div class="border-b border-stone-200 pb-6">
-              <div class="text-[10px] text-graphite-400 uppercase tracking-widest font-mono">Headquarters &amp; Joinery Facility</div>
-              <div class="text-lg font-semibold text-carbon-900 mt-1">Al Qusais Industrial Area 1</div>
-              <div class="text-xs text-graphite-600 mt-1">Warehouse No. 23, Street 10b &bull; P.O. Box 1422, Dubai, UAE</div>
-              <div class="text-[11px] text-graphite-500 font-mono mt-2">CNC Routing &bull; Wood Turning &bull; Architectural Doors &amp; Frames</div>
-            </div>
-
-            <div>
-              <div class="text-[10px] text-graphite-400 uppercase tracking-widest font-mono">Timber Storage &amp; Milling Facility</div>
-              <div class="text-lg font-semibold text-carbon-900 mt-1">Al Ramool Industrial Area</div>
-              <div class="text-xs text-graphite-600 mt-1">Dubai, United Arab Emirates</div>
-              <div class="text-[11px] text-graphite-500 font-mono mt-2">Cut-to-size Lumber &bull; Plywood / MDF Sizing &bull; Pergola Fabrication</div>
-            </div>
-          </div>
-
-          <div class="pt-2">
-            <button onclick="copyAddress()" class="w-full py-3 border border-stone-300 hover:border-carbon-900 bg-white text-xs uppercase tracking-widest text-carbon-900 transition font-medium shadow-2xs">
-              <span id="copyBtnText">Copy Main Warehouse Coordinates</span>
-            </button>
+        <!-- FAQ Item 04 -->
+        <div id="faqCard4" class="border border-stone-200 bg-[#fbfaf8] transition-all duration-200 rounded-xs">
+          <button onclick="toggleFaq(4)" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-medium text-sm text-stone-950">How can consultants and main contractors submit BOQ or drawing packages?</span>
+            <span id="faqIcon4" class="font-mono text-lg text-stone-500 transition-transform duration-300 inline-block">+</span>
+          </button>
+          <div id="faqContent4" class="hidden px-6 pb-6 text-xs text-stone-600 leading-relaxed border-t border-stone-200 pt-4 font-light">
+            You can submit your project drawings, joinery specs, or cutting schedules directly through our online proposal form below or by visiting our Al Qusais headquarters for direct estimation review within 24 business hours.
           </div>
         </div>
 
@@ -1060,16 +646,16 @@
     </div>
   </section>
 
-  <!-- RFP / INQUIRY & ESTIMATOR -->
+  <!-- INQUIRY / RFP FORM SECTION -->
   <section id="inquiry" class="py-24 border-b border-stone-200 bg-[#fbfaf8]">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center mb-14">
-        <span class="text-[11px] font-semibold tracking-[0.3em] text-graphite-500 uppercase block mb-2">Direct Estimation</span>
-        <h2 class="text-3xl sm:text-4xl text-carbon-900 font-semibold tracking-tight">
+        <span class="text-[11px] font-semibold tracking-[0.3em] text-timber-700 uppercase block mb-2">Direct Estimation</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-950 font-semibold tracking-tight">
           Request a Proposal
         </h2>
-        <p class="text-graphite-600 text-xs sm:text-sm mt-3 leading-relaxed max-w-lg mx-auto">
+        <p class="text-stone-600 text-xs sm:text-sm mt-3 leading-relaxed max-w-lg mx-auto">
           Submit your project drawings, joinery specifications, or timber cutting schedule for direct engineering review and competitive BOQ quotation.
         </p>
       </div>
@@ -1079,32 +665,32 @@
           
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <label class="block text-[11px] uppercase tracking-wider text-graphite-600 mb-2 font-mono" for="fullName">Full Name / Contact *</label>
-              <input type="text" id="fullName" required class="w-full bg-[#fdfdfc] border border-stone-300 px-4 py-3 text-xs text-carbon-900 focus:border-carbon-900 focus:outline-none transition" placeholder="e.g., Tariq Al Mansoor" />
+              <label class="block text-[11px] uppercase tracking-wider text-stone-700 mb-2 font-mono" for="fullName">Full Name / Contact *</label>
+              <input type="text" id="fullName" required class="w-full bg-[#fdfdfc] border border-stone-300 px-4 py-3 text-xs text-stone-950 focus:border-stone-950 focus:outline-none transition" placeholder="e.g., Tariq Al Mansoor" />
             </div>
 
             <div>
-              <label class="block text-[11px] uppercase tracking-wider text-graphite-600 mb-2 font-mono" for="orgName">Company / Practice *</label>
-              <input type="text" id="orgName" required class="w-full bg-[#fdfdfc] border border-stone-300 px-4 py-3 text-xs text-carbon-900 focus:border-carbon-900 focus:outline-none transition" placeholder="e.g., Apex Design Consultants" />
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div>
-              <label class="block text-[11px] uppercase tracking-wider text-graphite-600 mb-2 font-mono" for="emailAddr">Official Email *</label>
-              <input type="email" id="emailAddr" required class="w-full bg-[#fdfdfc] border border-stone-300 px-4 py-3 text-xs text-carbon-900 focus:border-carbon-900 focus:outline-none transition" placeholder="tariq@company.ae" />
-            </div>
-
-            <div>
-              <label class="block text-[11px] uppercase tracking-wider text-graphite-600 mb-2 font-mono" for="phoneNum">Phone / Mobile (UAE/GCC) *</label>
-              <input type="tel" id="phoneNum" required class="w-full bg-[#fdfdfc] border border-stone-300 px-4 py-3 text-xs text-carbon-900 focus:border-carbon-900 focus:outline-none transition" placeholder="+971 50 000 0000" />
+              <label class="block text-[11px] uppercase tracking-wider text-stone-700 mb-2 font-mono" for="orgName">Company / Practice *</label>
+              <input type="text" id="orgName" required class="w-full bg-[#fdfdfc] border border-stone-300 px-4 py-3 text-xs text-stone-950 focus:border-stone-950 focus:outline-none transition" placeholder="e.g., Apex Design Consultants" />
             </div>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <label class="block text-[11px] uppercase tracking-wider text-graphite-600 mb-2 font-mono" for="scopeSelect">Primary Scope *</label>
-              <select id="scopeSelect" class="w-full bg-[#fdfdfc] border border-stone-300 px-4 py-3 text-xs text-graphite-800 focus:border-carbon-900 focus:outline-none transition">
+              <label class="block text-[11px] uppercase tracking-wider text-stone-700 mb-2 font-mono" for="emailAddr">Official Email *</label>
+              <input type="email" id="emailAddr" required class="w-full bg-[#fdfdfc] border border-stone-300 px-4 py-3 text-xs text-stone-950 focus:border-stone-950 focus:outline-none transition" placeholder="tariq@company.ae" />
+            </div>
+
+            <div>
+              <label class="block text-[11px] uppercase tracking-wider text-stone-700 mb-2 font-mono" for="phoneNum">Phone / Mobile (UAE/GCC) *</label>
+              <input type="tel" id="phoneNum" required class="w-full bg-[#fdfdfc] border border-stone-300 px-4 py-3 text-xs text-stone-950 focus:border-stone-950 focus:outline-none transition" placeholder="+971 50 000 0000" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-[11px] uppercase tracking-wider text-stone-700 mb-2 font-mono" for="scopeSelect">Primary Scope *</label>
+              <select id="scopeSelect" class="w-full bg-[#fdfdfc] border border-stone-300 px-4 py-3 text-xs text-stone-800 focus:border-stone-950 focus:outline-none transition">
                 <option value="custom_joinery">Bespoke Architectural Joinery &amp; Wall Paneling</option>
                 <option value="flooring">Flooring Installation (Wood / Vinyl / Carpet)</option>
                 <option value="raw_timber">Cut to Size Lumber / Plywood / MDF Supply</option>
@@ -1115,29 +701,28 @@
             </div>
 
             <div>
-              <label class="block text-[11px] uppercase tracking-wider text-graphite-600 mb-2 font-mono" for="locationInput">Project Location *</label>
-              <input type="text" id="locationInput" required class="w-full bg-[#fdfdfc] border border-stone-300 px-4 py-3 text-xs text-carbon-900 focus:border-carbon-900 focus:outline-none transition" placeholder="e.g., DIFC Dubai or Abu Dhabi" />
+              <label class="block text-[11px] uppercase tracking-wider text-stone-700 mb-2 font-mono" for="locationInput">Project Location *</label>
+              <input type="text" id="locationInput" required class="w-full bg-[#fdfdfc] border border-stone-300 px-4 py-3 text-xs text-stone-950 focus:border-stone-950 focus:outline-none transition" placeholder="e.g., DIFC Dubai or Abu Dhabi" />
             </div>
           </div>
 
           <div>
-            <label class="block text-[11px] uppercase tracking-wider text-graphite-600 mb-2 font-mono" for="projectBrief">Project Summary &amp; BOQ Specifications</label>
-            <textarea id="projectBrief" rows="4" class="w-full bg-[#fdfdfc] border border-stone-300 p-4 text-xs text-carbon-900 focus:border-carbon-900 focus:outline-none transition" placeholder="Provide approximate square meters, specified timber species (e.g. Oak, Teak), target handover date..."></textarea>
+            <label class="block text-[11px] uppercase tracking-wider text-stone-700 mb-2 font-mono" for="projectBrief">Project Summary &amp; BOQ Specifications</label>
+            <textarea id="projectBrief" rows="4" class="w-full bg-[#fdfdfc] border border-stone-300 p-4 text-xs text-stone-950 focus:border-stone-950 focus:outline-none transition" placeholder="Provide approximate square meters, specified timber species (e.g. Oak, Teak), target handover date..."></textarea>
           </div>
 
           <div class="flex flex-col sm:flex-row items-center justify-between pt-2 gap-4">
-            <span class="text-[11px] text-graphite-400 font-mono">Turnaround: within 24 business hours</span>
-            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-carbon-900 hover:bg-graphite-700 text-white text-xs uppercase tracking-[0.2em] font-semibold transition duration-200">
+            <span class="text-[11px] text-stone-500 font-mono">Turnaround: within 24 business hours</span>
+            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-stone-950 hover:bg-stone-800 text-white text-xs uppercase tracking-[0.2em] font-semibold transition duration-200">
               Submit Specifications
             </button>
           </div>
 
         </form>
 
-        <!-- Submission Feedback Message Box -->
-        <div id="formSuccessBox" class="hidden mt-6 p-6 border border-stone-300 bg-[#fbfaf8] text-carbon-900 text-xs">
-          <div class="text-base font-semibold text-carbon-900 mb-1">Inquiry Dispatched Successfully</div>
-          <p class="text-graphite-600 leading-relaxed font-normal">
+        <div id="formSuccessBox" class="hidden mt-6 p-6 border border-stone-300 bg-[#fbfaf8] text-stone-950 text-xs">
+          <div class="text-base font-semibold text-stone-950 mb-1">Inquiry Dispatched Successfully</div>
+          <p class="text-stone-600 leading-relaxed font-normal">
             Thank you for reaching out to Haji Furniture. Our estimating and joinery engineering team at Al Qusais will review your scope and provide a formal response promptly.
           </p>
         </div>
@@ -1147,46 +732,46 @@
     </div>
   </section>
 
-  <!-- FOOTER & CONTACT (Light Minimalist Aesthetic) -->
-  <footer id="contact" class="bg-[#f9f8f5] border-t border-stone-200 text-graphite-600 text-xs font-normal">
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-stone-800 border-t border-stone-700 text-stone-300 text-xs font-normal">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
         
         <div class="lg:col-span-4 space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 border border-carbon-900 bg-carbon-900 flex items-center justify-center text-white font-bold text-sm">
+            <div class="w-8 h-8 border border-stone-600 bg-stone-700 flex items-center justify-center text-amber-400 font-serif font-bold text-sm">
               H
             </div>
-            <span class="tracking-[0.2em] text-base text-carbon-900 uppercase font-bold">
+            <span class="tracking-[0.2em] text-base text-white uppercase font-bold font-serif">
               Haji Furniture
             </span>
           </div>
-          <p class="text-xs text-graphite-600 leading-relaxed">
+          <p class="text-xs text-stone-300 leading-relaxed font-light">
             Leading timber manufacturers, flooring contractors, and bespoke joinery experts established in Dubai since 1963.
           </p>
-          <div class="text-[11px] font-mono text-graphite-500 uppercase tracking-widest pt-2 font-medium">
+          <div class="text-[11px] font-mono text-amber-400 uppercase tracking-widest pt-2 font-medium">
             60+ Years of Craftsmanship
           </div>
         </div>
 
         <div class="lg:col-span-3 space-y-2">
-          <h4 class="text-sm text-carbon-900 uppercase tracking-wider mb-3 font-semibold">Facility 01 (HQ)</h4>
-          <p class="text-graphite-600">Warehouse No. 23, Street 10b</p>
-          <p class="text-graphite-600">Al Qusais Industrial Area 1</p>
-          <p class="text-graphite-600">P.O. Box 1422, Dubai, U.A.E.</p>
+          <h4 class="text-sm text-white uppercase tracking-wider mb-3 font-semibold font-serif">Facility 01 (HQ)</h4>
+          <p class="text-stone-300 font-light">Warehouse No. 23, Street 10b</p>
+          <p class="text-stone-300 font-light">Al Qusais Industrial Area 1</p>
+          <p class="text-stone-300 font-light">P.O. Box 1422, Dubai, U.A.E.</p>
         </div>
 
         <div class="lg:col-span-3 space-y-2">
-          <h4 class="text-sm text-carbon-900 uppercase tracking-wider mb-3 font-semibold">Facility 02</h4>
-          <p class="text-graphite-600">Al Ramool Industrial Area</p>
-          <p class="text-graphite-600">Timber Milling &amp; Raw Stores</p>
-          <p class="text-graphite-600">Dubai, United Arab Emirates</p>
+          <h4 class="text-sm text-white uppercase tracking-wider mb-3 font-semibold font-serif">Facility 02</h4>
+          <p class="text-stone-300 font-light">Al Ramool Industrial Area</p>
+          <p class="text-stone-300 font-light">Timber Milling &amp; Raw Stores</p>
+          <p class="text-stone-300 font-light">Dubai, United Arab Emirates</p>
         </div>
 
         <div class="lg:col-span-2 space-y-2">
-          <h4 class="text-sm text-carbon-900 uppercase tracking-wider mb-3 font-semibold">Sectors</h4>
-          <ul class="space-y-1.5 text-graphite-600">
+          <h4 class="text-sm text-white uppercase tracking-wider mb-3 font-semibold font-serif">Sectors</h4>
+          <ul class="space-y-1.5 text-stone-300 font-light">
             <li>Banking &amp; Finance</li>
             <li>Corporate Headquarters</li>
             <li>Retail &amp; Boutiques</li>
@@ -1197,7 +782,7 @@
 
       </div>
 
-      <div class="mt-16 pt-8 border-t border-stone-200 flex flex-col sm:flex-row justify-between items-center text-[11px] text-graphite-400 gap-4">
+      <div class="mt-16 pt-8 border-t border-stone-700 flex flex-col sm:flex-row justify-between items-center text-[11px] text-stone-400 gap-4">
         <div>
           &copy; <span id="yearSpan"></span> Haji Furniture. All rights reserved. Registered in Dubai, UAE.
         </div>
@@ -1213,24 +798,9 @@
     </div>
   </footer>
 
-  <!-- PROJECT INSPECTION MODAL (Refined Light Architecture) -->
-  <div id="projectModal" class="fixed inset-0 z-50 bg-carbon-900/60 backdrop-blur-xs hidden flex items-center justify-center p-4 sm:p-6" onclick="closeModalOnBackdrop(event)">
-    <div class="bg-white border border-stone-200 max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative shadow-xl" onclick="event.stopPropagation()">
-      <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-graphite-400 hover:text-carbon-900 text-xs uppercase tracking-widest font-mono p-2">
-        [ Close &times; ]
-      </button>
-      
-      <div id="modalContent">
-        <!-- Injected via JavaScript -->
-      </div>
-    </div>
-  </div>
-
   <script>
-    // Current year
     document.getElementById('yearSpan').textContent = new Date().getFullYear();
 
-    // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     mobileMenuBtn.addEventListener('click', () => {
@@ -1242,386 +812,35 @@
       });
     });
 
-    // Wood Species Data (from Page 2)
-    const woodData = {
-      oak: {
-        title: "White & Red Oak",
-        category: "Hardwood Species",
-        origin: "North America / Europe",
-        density: "710 - 750 kg/m³ • High Stability",
-        app: "Flooring, Acoustic Slats, Executive Conference Tables",
-        desc: "Renowned for distinct coarse grain and tremendous resilience against heavy commercial footfall. Takes stains, cerused finishes, and polyurethane sealants exceptionally well. Featured widely across Emirates Islamic Bank and Mashreq corporate branches."
-      },
-      teak: {
-        title: "Burma & Plantation Teak",
-        category: "Marine & Luxury Hardwood",
-        origin: "Southeast Asia",
-        density: "650 - 700 kg/m³ • Natural Silica Content",
-        app: "Pergolas, Poolside Decks, Yachts, Wet-Area Balustrades",
-        desc: "Contains natural oils that provide unmatched resilience to moisture, humidity, and dry rot in extreme Gulf climates. Perfect for luxury residential pergolas, outdoor benches, and yacht-grade architectural claddings."
-      },
-      ash: {
-        title: "American White Ash",
-        category: "Hardwood Species",
-        origin: "North America",
-        density: "670 - 710 kg/m³ • High Shock Resistance",
-        app: "Curved Joinery, Moldings, Custom Chairs, Staircases",
-        desc: "Offers pronounced straight grain and superior steam-bending capabilities. Its lighter tone makes it a staple for minimalist Scandinavian interiors, retail display cases, and modern healthcare environments."
-      },
-      iroko: {
-        title: "Iroko (African Teak)",
-        category: "Exotic Hardwood",
-        origin: "West & Central Africa",
-        density: "640 - 680 kg/m³ • Weather Resilient",
-        app: "Exterior Louvers, Heavy Pergolas, Commercial Thresholds",
-        desc: "A yellow-brown timber that matures into a deep golden hue over time. Extremely resistant to insect attack and weathering, making it the preferred economical alternative to Burmese Teak for outdoor architectural structures."
-      },
-      meranti: {
-        title: "Red Meranti Wood",
-        category: "Commercial Hardwood",
-        origin: "Southeast Asia",
-        density: "500 - 650 kg/m³ • Uniform Texture",
-        app: "Heavy Door Frames, Core Framing, Skirtings, Moldings",
-        desc: "A fundamental material in UAE commercial fit-out. Features uniform workability and low dimensional movement after kiln seasoning. Ideal for heavy sub-frames, custom door leaves, and decorative skirting details."
-      },
-      beech: {
-        title: "European Steamed Beech",
-        category: "Hardwood Species",
-        origin: "Central Europe",
-        density: "720 kg/m³ • Tight Closed Grain",
-        app: "Wood Turning, Handrails, Balustrades, Internal Joinery",
-        desc: "Even, fine-pored texture with a gentle pinkish hue when steamed. Machining cleanly to smooth polished profiles, it is Haji Furniture's standard choice for turned architectural balustrades, handrails, and cabinet linings."
-      },
-      mahogany: {
-        title: "Honduran Mahogany & Hard Maple",
-        category: "Noble Hardwoods",
-        origin: "Central America & Northern US",
-        density: "600 - 720 kg/m³ • Dense & Lustrous",
-        app: "Executive Desks, Boardroom Credenzas, Book-matched Veneers",
-        desc: "Famous for warmth, luster, and dimensional stability. Used exclusively for high-prestige bespoke loose furniture, VIP conference tables, and heritage classical styles as detailed in Summer's Cottage collections."
-      },
-      whitewood: {
-        title: "White Wood & Austrian Pine",
-        category: "Softwood Timber",
-        origin: "Northern Europe / Austria",
-        density: "450 - 500 kg/m³ • Fast Sizing",
-        app: "Sub-flooring, Stud Framing, Temporary Shoring, Packaging",
-        desc: "Clean, consistent softwood supplied cut-to-size from our Al Ramool plant. Essential for sub-wall framing, acoustic ceiling backbones, custom crating, and temporary architectural forms."
-      }
-    };
-
-    function selectWood(key) {
-      const data = woodData[key];
-      if (!data) return;
-
-      document.getElementById('woodTitle').textContent = data.title;
-      document.getElementById('woodCategory').textContent = data.category;
-      document.getElementById('woodOrigin').textContent = "Origin: " + data.origin;
-      document.getElementById('woodDensity').textContent = data.density;
-      document.getElementById('woodApp').textContent = data.app;
-      document.getElementById('woodDesc').textContent = data.desc;
-
-      // Update button styling with Carbon (#1e2022) border indicator
-      const buttons = document.querySelectorAll('.wood-btn');
-      buttons.forEach(btn => {
-        if (btn.getAttribute('data-wood') === key) {
-          btn.classList.add('bg-white', 'border-carbon-900');
-          btn.classList.remove('border-transparent');
-          btn.querySelector('span:last-child').textContent = 'Selected';
-          btn.querySelector('span:last-child').className = 'text-[10px] font-mono uppercase tracking-widest text-carbon-900 font-medium';
-        } else {
-          btn.classList.remove('bg-white', 'border-carbon-900');
-          btn.classList.add('border-transparent');
-          btn.querySelector('span:last-child').textContent = 'Inspect';
-          btn.querySelector('span:last-child').className = 'text-[10px] font-mono uppercase tracking-widest text-graphite-400';
-        }
-      });
-    }
-
-    // Portfolio Filtering: Underline tab style with Carbon (#1e2022)
-    function filterProjects(cat) {
-      const cards = document.querySelectorAll('.project-card');
-      const buttons = document.querySelectorAll('.project-filter-btn');
-
-      buttons.forEach(b => {
-        if (b.getAttribute('data-filter') === cat) {
-          b.className = 'project-filter-btn text-carbon-900 border-b-2 border-carbon-900 pb-2 -mb-[18px] transition';
-        } else {
-          b.className = 'project-filter-btn text-graphite-400 hover:text-carbon-900 pb-2 transition';
-        }
-      });
-
-      cards.forEach(card => {
-        if (cat === 'all' || card.getAttribute('data-category') === cat) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    // Client Logos Filtering
-    function filterClients(cat) {
-      const cards = document.querySelectorAll('.client-logo-card');
-      const buttons = document.querySelectorAll('.client-filter-btn');
-
-      buttons.forEach(b => {
-        if (b.getAttribute('data-cfilter') === cat) {
-          b.className = 'client-filter-btn text-carbon-900 border-b-2 border-carbon-900 pb-2 -mb-[14px] transition';
-        } else {
-          b.className = 'client-filter-btn text-graphite-400 hover:text-carbon-900 pb-2 transition';
-        }
-      });
-
-      cards.forEach(card => {
-        if (cat === 'all' || card.getAttribute('data-ccat') === cat) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    // Detailed Project Modal Data for 5 Flagships
-    const projectDetails = {
-      eib: {
-        title: "Emirates Islamic Bank Premier Branches",
-        location: "Sharjah, JLT Dubai & Zero 6 Mall",
-        client: "Emirates Islamic",
-        image: "https://ibb.co.com/twZMnLJ8",
-        fallback: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
-        scope: "Custom Teller Counters, Brand Purple Acrylic-Veneer Cladding, Majlis Private Banking Suite, Curved Ceiling Bulkheads",
-        details: "Haji Furniture delivered full turnkey joinery packages across multiple premier branches of Emirates Islamic Bank. The project demanded zero-tolerance millwork combining acoustic wood paneling with brand-matched purple glossy finishes, custom solid-surface transaction ledges, security teller sub-structures, and executive majlis conference joinery."
-      },
-      dewa: {
-        title: "Dubai Electricity & Water Authority (DEWA)",
-        location: "Satwa, Dubai",
-        client: "DEWA - Dubai Government",
-        image: "https://ibb.co.com/rKkvnLWz",
-        fallback: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=900&auto=format&fit=crop",
-        scope: "Vertical Timber Baffle Corridors, Geometric Acoustic Wall Insets, Large Boardroom Tables, Executive Lounges",
-        details: "For DEWA's Satwa corporate office, Haji Furniture fabricated integrated wall paneling with backlit branch silhouettes, expansive natural walnut conference tables, and geometric felt-backed wood wall alcoves providing quiet breakout spaces for government engineers and senior leadership."
-      },
-      katerra: {
-        title: "Katerra Regional Headquarters",
-        location: "DIFC, Dubai",
-        client: "Katerra Middle East",
-        image: "https://ibb.co.com/7xpKB8pg",
-        fallback: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=900&auto=format&fit=crop",
-        scope: "Industrial Slatted Timber Partitions, Workstation Tops, High-top Meeting Bars, Reception Cladding",
-        details: "An ultramodern corporate interior in DIFC combining raw industrial aesthetics with refined timber craftsmanship. Scope included matte black vertical timber louvers separating departments, integrated acoustic wall cladding with directional lighting, and solid wood meeting tables."
-      },
-      pullman: {
-        title: "Pullman Executive Lounge",
-        location: "Deira, Dubai",
-        client: "Pullman Hotels and Resorts",
-        image: "https://ibb.co.com/DJ21GKn",
-        fallback: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=900&auto=format&fit=crop",
-        scope: "Executive Hotel Lounge Joinery, Food Service Millwork, Wood Paneling, Private Meeting Enclaves",
-        details: "Custom fabricated for international 5-star hotel standards. The Pullman lounge integrates heavy duty commercial hardware, acoustic timber paneling, concealed beverage cabinetry, and luxury bespoke finishes."
-      },
-      brs: {
-        title: "BRS Ventures & Tawazun",
-        location: "Abu Dhabi",
-        client: "BRS Ventures / Tawazun",
-        image: "https://ibb.co.com/LDpZyksy",
-        fallback: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=900&auto=format&fit=crop",
-        scope: "Sweeping Organic Reception Desks, Auditorium Timber Tiering, Executive Wall Treatments",
-        details: "One of our most architecturally ambitious fit-outs, featuring futuristic sculptural thermoformed and timber reception desks, stepped amphitheater timber benches with integrated seat pads, and executive boardrooms with acoustic louver walls."
-      }
-    };
-
-    function openProjectModal(key) {
-      const p = projectDetails[key];
-      if (!p) return;
-
-      const modal = document.getElementById('projectModal');
-      const content = document.getElementById('modalContent');
-
-      content.innerHTML = `
-        <div class="text-[11px] font-mono text-timber-700 uppercase tracking-widest mb-1 font-semibold">Architectural Specification Sheet</div>
-        <h3 class="text-2xl sm:text-3xl text-stone-950 font-semibold mb-2">${p.title}</h3>
-        <div class="text-xs text-stone-500 font-mono mb-4 pb-3 border-b border-stone-200">
-          Location: <span class="text-stone-900 font-medium">${p.location}</span> &bull; Client: <span class="text-stone-900 font-medium">${p.client}</span>
-        </div>
-
-        <div class="relative aspect-[16/9] overflow-hidden bg-stone-100 mb-6 border border-stone-200">
-          <img 
-            src="${p.image}" 
-            alt="${p.title}" 
-            class="w-full h-full object-cover" 
-            onerror="this.onerror=null; this.src='${p.fallback}'"
-          />
-          <a href="${p.image}" target="_blank" rel="noopener noreferrer" class="absolute bottom-2 right-2 px-2.5 py-1 bg-stone-950/80 hover:bg-stone-950 text-[10px] font-mono text-white tracking-widest uppercase transition">
-            View Full Source Image &nearr;
-          </a>
-        </div>
-
-        <div class="space-y-4 text-xs text-stone-700 font-normal leading-relaxed">
-          <div>
-            <span class="text-stone-500 block uppercase font-mono tracking-wider mb-1 text-[10px]">Executed Scope of Works:</span>
-            <div class="p-3 bg-stone-50 border border-stone-200 text-stone-900 font-mono text-xs">${p.scope}</div>
-          </div>
-
-          <div class="pt-2">
-            <span class="text-stone-500 block uppercase font-mono tracking-wider mb-1 text-[10px]">Architectural Details &amp; Engineering:</span>
-            <p class="text-stone-700 leading-relaxed">${p.details}</p>
-          </div>
-        </div>
-
-        <div class="mt-8 pt-6 border-t border-stone-200 flex flex-wrap justify-between items-center gap-4">
-          <span class="text-[11px] text-stone-400 font-mono">Haji Furniture &bull; Dubai Est. 1963</span>
-          <a href="#inquiry" onclick="closeProjectModal()" class="px-6 py-2.5 bg-stone-950 hover:bg-stone-800 text-white text-xs uppercase tracking-widest font-semibold transition">
-            Inquire Similar Scope &rarr;
-          </a>
-        </div>
-      `;
-
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeProjectModal() {
-      const modal = document.getElementById('projectModal');
-      modal.classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    }
-
-    function closeModalOnBackdrop(e) {
-      if (e.target.id === 'projectModal') {
-        closeProjectModal();
+    function toggleFaq(index) {
+      const content = document.getElementById('faqContent' + index);
+      const icon = document.getElementById('faqIcon' + index);
+      const card = document.getElementById('faqCard' + index);
+      
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.textContent = '-';
+        icon.style.transform = 'rotate(180deg)';
+        card.classList.add('border-stone-900', 'bg-white');
+        card.classList.remove('border-stone-200', 'bg-[#fbfaf8]');
+      } else {
+        content.classList.add('hidden');
+        icon.textContent = '+';
+        icon.style.transform = 'rotate(0deg)';
+        card.classList.remove('border-stone-900', 'bg-white');
+        card.classList.add('border-stone-200', 'bg-[#fbfaf8]');
       }
     }
 
-    // Copy Warehouse Address Helper
-    function copyAddress() {
-      const textToCopy = "Haji Furniture, Warehouse No.23, Street 10b, Al Qusais Industrial Area 1, P.O.Box 1422, Dubai, U.A.E.";
-      const tempInput = document.createElement("input");
-      tempInput.style.position = "absolute";
-      tempInput.style.left = "-9999px";
-      tempInput.value = textToCopy;
-      document.body.appendChild(tempInput);
-      tempInput.select();
-      try {
-        document.execCommand('copy');
-        const btnText = document.getElementById('copyBtnText');
-        btnText.textContent = "Address Copied to Clipboard";
-        setTimeout(() => {
-          btnText.textContent = "Copy Main Warehouse Coordinates";
-        }, 3000);
-      } catch (err) {
-        // graceful fallback
-      }
-      document.body.removeChild(tempInput);
-    }
-
-    // Form Handling
     function handleInquirySubmit(e) {
       e.preventDefault();
       const form = document.getElementById('rfpForm');
       const successBox = document.getElementById('formSuccessBox');
       
-      // Show confirmation
       successBox.classList.remove('hidden');
       form.reset();
-
-      // Scroll to confirmation box
       successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
-
-    // ==========================================
-    // FULL HORIZONTAL PROJECT SLIDER LOGIC
-    // ==========================================
-    let currentSlide = 0;
-    const totalSlides = 5;
-    const sliderTrack = document.getElementById('projectSliderTrack');
-    const currentSlideNum = document.getElementById('currentSlideNum');
-    const dots = document.querySelectorAll('.slide-dot');
-
-    function updateSliderPosition() {
-      if (!sliderTrack) return;
-      // Shift track horizontally by 100% per slide
-      sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-      // Update numerical counter with leading zero
-      if (currentSlideNum) {
-        currentSlideNum.textContent = String(currentSlide + 1).padStart(2, '0');
-      }
-
-      // Update dot active indicator styling
-      dots.forEach((dot, index) => {
-        if (index === currentSlide) {
-          dot.className = 'slide-dot w-6 h-1 bg-stone-900 transition-all duration-300';
-        } else {
-          dot.className = 'slide-dot w-2 h-1 bg-stone-200 hover:bg-stone-400 transition-all duration-300';
-        }
-      });
-    }
-
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateSliderPosition();
-    }
-
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      updateSliderPosition();
-    }
-
-    function goToSlide(index) {
-      if (index >= 0 && index < totalSlides) {
-        currentSlide = index;
-        updateSliderPosition();
-      }
-    }
-
-    // Touch & Swipe Gestures for Mobile / Tablet Devices
-    const sliderContainer = document.getElementById('projectSliderContainer');
-    if (sliderContainer) {
-      let touchStartX = 0;
-      let touchEndX = 0;
-
-      sliderContainer.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-      }, { passive: true });
-
-      sliderContainer.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipeGesture();
-      }, { passive: true });
-
-      function handleSwipeGesture() {
-        const swipeThreshold = 40; // minimum distance in px
-        const difference = touchStartX - touchEndX;
-
-        if (Math.abs(difference) > swipeThreshold) {
-          if (difference > 0) {
-            // Swiped Left -> Next slide
-            nextSlide();
-          } else {
-            // Swiped Right -> Prev slide
-            prevSlide();
-          }
-        }
-      }
-    }
-
-    // Keyboard Arrow Navigation (when focused or keydown)
-    window.addEventListener('keydown', (e) => {
-      const projectsSection = document.getElementById('projects');
-      if (!projectsSection) return;
-      const rect = projectsSection.getBoundingClientRect();
-      // Only respond if the project section is within viewport
-      const isInView = (rect.top <= window.innerHeight && rect.bottom >= 0);
-
-      if (isInView) {
-        if (e.key === 'ArrowRight') {
-          nextSlide();
-        } else if (e.key === 'ArrowLeft') {
-          prevSlide();
-        }
-      }
-    });
   </script>
 </body>
 </html>
